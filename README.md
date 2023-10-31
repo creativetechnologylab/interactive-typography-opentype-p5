@@ -66,7 +66,7 @@ if (i % 21 == 0) {
   rect(letterPoint.x + (mouseX/100), letterPoint.y + (mouseY/100), 2 + (mouseX/10), 2 + (mouseY/10));
 }
 ```
-Users are encouraged to develop their interactions and generative designs in this section. 
+Users are encouraged to develop their interactions and generative algorithms by creating additional `if` statements or modifying and extending the existing `if` statements.
 
 The other sections of the `draw` function are more concerned with extracting the path data. For a detailed explanation of that we provide below a breakdown of the key phases:
 
