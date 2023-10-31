@@ -54,7 +54,7 @@ opentype.load("data/FreeSans.otf", function (error, _font) {
 
 ### Rendering Loop: The `draw` Function
 
-The `draw` function is the core of the script, encompassing the logic for type rendering and manipulation. In practice, the main operations occur at the end of the `draw` function, within:
+The `draw` function is the core of the script, encompassing the logic for type rendering and manipulation. In practice, the code which determines the visual output of the script occur at the end of the `draw` function:
 
 #### Path Point Manipulation
 
@@ -94,10 +94,6 @@ path = g.resampleByLength(path, 1);
 The script captures keyboard events for textual interaction. ASCII values are used to filter keys and modify the `textTyped` string dynamically.
 More information about ASCII values can be found [here](https://theasciicode.com.ar/)
 
-## Conclusion
-
-This sketch offers a detailed, algorithmic approach to manipulating typographic elements. Through a combination of open-source libraries and creative coding techniques, it demonstrates the vast potential of generative typography.
 
 ---
 
-Feel free to adapt the content further to fit your requirements.
