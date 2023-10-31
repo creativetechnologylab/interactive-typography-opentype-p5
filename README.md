@@ -4,6 +4,8 @@
 
 In the realm of generative art, typography occupies a unique space, serving as a bridge between conventional design elements and algorithmic unpredictability. This [p5.js sketch](https://github.com/creativetechnologylab/interactive-typography-p5/blob/main/sketch.js) seeks to delve into the granular aspects of type manipulation, building on the typographic scripts supplied generously by [Generative Gestaltung](http://www.generative-gestaltung.de/2/). We build on their framework by simplyfying the sketch to a general template that allows learners to build their own creations.
 
+This document examines in detail some of the code snippets. It is not necessarily in the order the code is written in the script. Learners are encouraged to examin the sketch.js file , which is structured, in conjunction with this. 
+
 
 ## Architectural Overview
 
@@ -25,6 +27,22 @@ Ensure you've integrated all the necessary external files into your `index.html`
 
 For the complete setup, refer to this [index.html boilerplate](https://github.com/creativetechnologylab/interactive-typography-p5/blob/main/index.html).
 
+### Font Loading
+
+The font is loaded asynchronously using `opentype.js`. This library offers a robust set of functionalities to handle OpenType and TrueType fonts.
+This function searchs for a font file in the data directory. If it finds the file, it will load it into the font variable, otherwise it gives us an error. 
+The font needs to be uploaded to a folder of your own creation. This example creates and uses a folder "data". Learners can download this repo data directory with the example font files.
+
+```javascript
+opentype.load("data/FreeSans.otf", function (error, _font) {
+  if (error) {
+    console.log(error);
+  } else {
+    font = _font;
+  }
+});
+```
+
 ## Detailed Code Analysis
 
 ### Variable Initialization
@@ -36,21 +54,7 @@ let textTyped = "Type...";
 
 Here, `font` serves as a placeholder for the loaded OpenType font, and `textTyped` holds the string subjected to generative transformations.
 
-### Font Loading
 
-The font is loaded asynchronously using `opentype.js`. This library offers a robust set of functionalities to handle OpenType and TrueType fonts.
-This function searchs for a font file in the data directory. If it finds the file, it will load it into the font variable, otherwise it gives us an error. 
-The font needs to be uploaded to a folder of your own creation. This example creates and uses a folder "data".
-
-```javascript
-opentype.load("data/FreeSans.otf", function (error, _font) {
-  if (error) {
-    console.log(error);
-  } else {
-    font = _font;
-  }
-});
-```
 
 ### Rendering Loop: The `draw` Function
 
