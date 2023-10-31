@@ -31,6 +31,8 @@ function draw() {
       // Skip undefined points
       if (!letterPoint.x) continue;
 
+      // -- Visual Output -- //
+      
       // Draw ellipse on every 3rd point
       if (i % 3 == 0) {
         fill(127, 127, 255);
