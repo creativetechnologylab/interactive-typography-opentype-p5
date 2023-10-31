@@ -1,8 +1,4 @@
-Certainly, let's deepen the technical aspect of the README, while aligning it closely with your original code commentary. I'll also aim to maintain the style of a Medium article, focusing on providing a more thorough understanding of how the script works.
-
----
-
-# Advanced Generative Typography with p5.js and opentype.js
+# Generative Typography with p5.js and opentype.js
 
 ## Introduction
 
