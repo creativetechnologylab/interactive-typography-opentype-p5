@@ -54,7 +54,7 @@ opentype.load("data/FreeSans.otf", function (error, _font) {
 
 ### Rendering Loop: The `draw` Function
 
-The `draw` function is the core of the script, encompassing the logic for type rendering and manipulation. In practice, the main operations occur within:
+The `draw` function is the core of the script, encompassing the logic for type rendering and manipulation. In practice, the main operations occur at the end of the `draw` function, within:
 
 #### Path Point Manipulation
 
@@ -68,7 +68,7 @@ if (i % 21 == 0) {
 ```
 Users are encouraged to develop their interactions and generative algorithms by creating additional `if` statements or modifying and extending the existing `if` statements.
 
-The other sections of the `draw` function are more concerned with extracting the path data. For a detailed explanation of that we provide below a breakdown of the key phases:
+The sections of the `draw` function leading up to the `if` are more concerned with extracting the path data. For a detailed explanation of that we provide below a breakdown of the key phases:
 
 #### Path Tracing
 
