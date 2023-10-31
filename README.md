@@ -92,8 +92,18 @@ path = g.resampleByLength(path, 1);
 ### Event Handling: Keyboard Input
 
 The script captures keyboard events for textual interaction. ASCII values are used to filter keys and modify the `textTyped` string dynamically.
+ASCII is the way computers map numbers to letters.
+ASCII 32 = the space bar.
+ASCII 65 = UPPERCASE "A"
+ASCII 97 = lowercase "a"
+This code is telling the function to only add key strokes which are 32 and above. 
 More information about ASCII values can be found [here](https://theasciicode.com.ar/)
 
+```javascript
+  if (keyCode >= 32) {
+    textTyped += key;
+  }
+```
 
 ---
 
