@@ -31,7 +31,7 @@ For the complete setup, refer to this [index.html boilerplate](https://github.co
 
 The font is loaded asynchronously using `opentype.js`. This library offers a robust set of functionalities to handle OpenType and TrueType fonts.
 This function searchs for a font file in the data directory. If it finds the file, it will load it into the font variable, otherwise it gives us an error. 
-The font needs to be uploaded to a folder of your own creation. This example creates and uses a folder "data". Learners can download this repo data directory with the example font files.
+The font needs to be uploaded to a folder of your own creation. This example creates and uses a folder "data". Learners can download this [data](https://github.com/creativetechnologylab/interactive-typography-opentype-p5/tree/main/data) directory with the example font files.
 
 ```javascript
 opentype.load("data/FreeSans.otf", function (error, _font) {
