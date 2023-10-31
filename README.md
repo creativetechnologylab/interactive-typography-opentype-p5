@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In the realm of generative art, typography occupies a unique space, serving as a bridge between conventional design elements and algorithmic unpredictability. This [p5.js sketch](https://github.com/creativetechnologylab/interactive-typography-p5/blob/main/sketch.js) seeks to delve into the granular aspects of type manipulation, building on the foundational work of [Generative Gestaltung](http://www.generative-gestaltung.de/2/).
+In the realm of generative art, typography occupies a unique space, serving as a bridge between conventional design elements and algorithmic unpredictability. This [p5.js sketch](https://github.com/creativetechnologylab/interactive-typography-p5/blob/main/sketch.js) seeks to delve into the granular aspects of type manipulation, building on the typographic scripts supplied generously by [Generative Gestaltung](http://www.generative-gestaltung.de/2/). We build on their framework by simplyfying the sketch to a general template that allows learners to build their own creations.
 
 
 ## Architectural Overview
@@ -54,7 +54,21 @@ opentype.load("data/FreeSans.otf", function (error, _font) {
 
 ### Rendering Loop: The `draw` Function
 
-The `draw` function is the core of the script, encompassing the logic for type rendering and manipulation. Below is a breakdown of the key phases:
+The `draw` function is the core of the script, encompassing the logic for type rendering and manipulation. In practice, the main operations occur within:
+
+#### Path Point Manipulation
+
+Looping through the path points, the sketch allows for selective point manipulation. In the snippet below, every 21st point undergoes a transformation, influenced by the mouse position:
+
+```javascript
+if (i % 21 == 0) {
+  fill(255,127,127);
+  rect(letterPoint.x + (mouseX/100), letterPoint.y + (mouseY/100), 2 + (mouseX/10), 2 + (mouseY/10));
+}
+```
+Users are encouraged to develop their interactions and generative designs in this section. 
+
+The other sections of the `draw` function are more concerned with extracting the path data. For a detailed explanation of that we provide below a breakdown of the key phases:
 
 #### Path Tracing
 
@@ -73,20 +87,12 @@ let path = new g.Path(fontPath.commands);
 path = g.resampleByLength(path, 1);
 ```
 
-#### Path Point Manipulation
 
-Looping through the path points, the sketch allows for selective point manipulation. In the snippet below, every 21st point undergoes a transformation, influenced by the mouse position:
-
-```javascript
-if (i % 21 == 0) {
-  fill(255,127,127);
-  rect(letterPoint.x + (mouseX/100), letterPoint.y + (mouseY/100), 2 + (mouseX/10), 2 + (mouseY/10));
-}
-```
 
 ### Event Handling: Keyboard Input
 
 The script captures keyboard events for textual interaction. ASCII values are used to filter keys and modify the `textTyped` string dynamically.
+More information about ASCII values can be found [here](https://theasciicode.com.ar/)
 
 ## Conclusion
 
