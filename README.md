@@ -95,7 +95,8 @@ The script captures keyboard events for textual interaction. ASCII values are us
 ASCII is the way computers map numbers to letters.  
 - ASCII 32 = the space bar.
 - ASCII 65 = UPPERCASE "A"
-- ASCII 97 = lowercase "a"  
+- ASCII 97 = lowercase "a"
+  
 This code is telling the function to only add key strokes which are 32 and above.  
 More information about ASCII values can be found [here](https://theasciicode.com.ar/)
 
