@@ -23,7 +23,7 @@ Ensure you've integrated all the necessary external files into your `index.html`
 ...
 ```
 
-For the complete setup, refer to this [index.html boilerplate](link-to-index-html](https://github.com/creativetechnologylab/interactive-typography-p5/blob/main/index.html)).
+For the complete setup, refer to this [index.html boilerplate](https://github.com/creativetechnologylab/interactive-typography-p5/blob/main/index.html).
 
 ## Detailed Code Analysis
 
