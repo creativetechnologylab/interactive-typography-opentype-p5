@@ -4,7 +4,6 @@
 
 In the realm of generative art, typography occupies a unique space, serving as a bridge between conventional design elements and algorithmic unpredictability. This p5.js sketch seeks to delve into the granular aspects of type manipulation, building on the foundational work of [Generative Gestaltung](http://www.generative-gestaltung.de/2/).
 
-![Generative Typography Example](example-image.png)
 
 ## Architectural Overview
 
